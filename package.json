@@ -1,0 +1,16 @@
+{
+  "name": "dress_code",
+  "version": "1.0.0",
+  "description": "This repository is an adventure into the universe of code.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "author": "",
+  "license": "MIT ",
+  "dependencies": {
+    "next": "^15.5.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
