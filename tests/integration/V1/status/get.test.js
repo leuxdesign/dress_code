@@ -1,7 +1,11 @@
-test("GET to /api/V1/status should return 200", async () => {
-  // Faz uma requisição HTTP real para a API
-  const response = await fetch("http://127.0.0.1:3000/api/V1/status");
+test("GET /api/v1/status retorna status 200 e body esperado", async () => {
+  const response = await fetch("http://localhost:3000/api/v1/status");
 
-  // Verifica se o status HTTP retornado é 200 (OK)
+  // contrato HTTP
   expect(response.status).toBe(200);
+  expect(response.headers.get("content-type")).toContain("application/json");
+
+  // contrato de dados
+  const body = await response.json();
+  expect(body).toEqual({ status: "ok" });
 });
